@@ -2,7 +2,7 @@
 <table class="table table-striped">
     <thead>
         <tr>
-            <th>Avatar</th>
+            <th width="25%">Avatar</th>
             <th>Full Name</th>
             <th>Email</th>
             <th>Mobile</th>
@@ -13,14 +13,14 @@
     <tbody>
         {{#each list}}
         <tr>
-            <td><img src="public/uploads/{{this.avatar}}"></td>
+            <td><img src="/public/uploads/{{this.avatar}}" width="100%"></td>
             <td>{{this.fullName}}</td>
             <td>{{this.email}}</td>
             <td>{{this.mobile}}</td>
             <td>{{this.city}}</td>
             <td>
                 <a href="/employee/{{this._id}}"><i class="fa fa-edit fa-lg" aria-hidden="true"></i></a>
-                <a href="/employee/delete/{{this._id}}" onclick="return confirm(Are you sure to delete this record?);"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+                <a href="/employee/delete/{{this._id}}" class="badge badge-danger" onclick="return confirm('Are you sure to delete this record?');"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
             </td>
         </tr>
         {{/each}}

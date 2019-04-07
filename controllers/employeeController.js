@@ -48,7 +48,6 @@ router.get('/list', (req, res) => {
         }
     });
 });
-//router.delete('/:id');
 router.get("/delete/:id", (req, res) => {
     Employee.findByIdAndRemove(req.params.id, (err, doc) => {
         if (!err) {  res.redirect('/employee/list');  }
