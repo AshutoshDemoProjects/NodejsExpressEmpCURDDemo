@@ -8,7 +8,9 @@ const bodyparser = require('body-parser');
 const employeeController = require('./controllers/employeeController');
 
 var app = express();
-
+//to static content
+//app.use('/public',express.static(__dirname+'/public'));
+app.use('public',express.static(path.join(__dirname, '/public/')));
 //to recive form data in body
 app.use(bodyparser.urlencoded({
     extended:true
